@@ -2,6 +2,8 @@ $paradise-pink: #EA1F4B;
 $paradise-pink-light: #EF5778;
 
 html {
+	// https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+	// By default, 1rem = 16px; the below makes it 10px
 	font-size: 62.5%;
 }
 

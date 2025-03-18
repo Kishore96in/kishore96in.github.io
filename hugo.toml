@@ -2,3 +2,8 @@ baseURL = "https://kishore96in.github.io/"
 languageCode = "en-in"
 title = "Kishore's homepage"
 pluralizelisttitles = false
+
+[caches]
+	#For caching in GitHub Actions builds
+	[caches.images]
+		dir = ':cacheDir/images'

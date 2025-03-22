@@ -1,5 +1,5 @@
 {{ define "page" }}
-	<div id="about">
+	<section class="about_card">
 		<h1>{{ .Params.author_name }}</h1>
 		<p>{{ .Params.subtitle }}</p>
 		
@@ -20,9 +20,9 @@
 		{{ range .Params.otherlinks }}
 			<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
 		{{ end }}
-	</div>
+	</section>
 	
-	<div id="blogs">
+	<section class="showcase_last_n_posts">
 			{{ $name := .Params.showcased_section.name }}
 			{{ $lim := .Params.showcased_section.num_shown_posts }}
 			{{ range (where .Pages "Section" $name) }}
@@ -36,5 +36,5 @@
 					<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
 				{{ end }}
 			{{ end }}
-	</div>
+	</section>
 {{ end }}

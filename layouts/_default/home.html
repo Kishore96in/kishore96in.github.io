@@ -1,4 +1,5 @@
 {{ define "page" }}
+	<div id="about">
 		<h1>{{ .Params.author_name }}</h1>
 		<p>{{ .Params.subtitle }}</p>
 		
@@ -19,5 +20,21 @@
 		{{ range .Params.otherlinks }}
 			<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
 		{{ end }}
-		
+	</div>
+	
+	<div id="blogs">
+			{{ $section_name := "blog" }}
+			{{ $num_pages := 5 }}
+			{{ range (where .Pages "Section" $section_name) }}
+				<h>{{ $section_name }}</h>
+				{{ range first $num_pages .Pages }}
+					<li>
+						<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
+					</li>
+				{{ end }}
+				{{ if gt .Pages.Len $num_pages }}
+					<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $num_pages }} more posts </a>
+				{{ end }}
+			{{ end }}
+	</div>
 {{ end }}

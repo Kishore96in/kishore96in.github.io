@@ -1,40 +1,42 @@
 {{ define "page" }}
-	<section class="about_card">
-		<h1>{{ .Params.author_name }}</h1>
-		<p>{{ .Params.subtitle }}</p>
-		
-		<p>
-		Alternate names:
-		{{ delimit .Params.alternate_names "; " }}
-			{{/* . */}}
-		{{/* end */}}
-		</p>
-		
-		<p>
-		Bibliography:
-		{{ range .Params.bibliolinks }}
-			[<a href="{{ .url }}">{{ .name }}</a>]
-		{{ end }}
-		</p>
-		
-		{{ range .Params.otherlinks }}
-			<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
-		{{ end }}
-	</section>
-	
-	<section class="showcase_last_n_posts">
-			{{ $name := .Params.showcased_section.name }}
-			{{ $lim := .Params.showcased_section.num_shown_posts }}
-			{{ range (where .Pages "Section" $name) }}
-				<h1>{{ $name }}</h1>
-				{{ range first $lim .Pages }}
-					<li>
-						<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
-					</li>
-				{{ end }}
-				{{ if gt .Pages.Len $lim }}
-					<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
-				{{ end }}
+	<div class="container">
+		<section class="about_card">
+			<h1>{{ .Params.author_name }}</h1>
+			<p>{{ .Params.subtitle }}</p>
+			
+			<p>
+			Alternate names:
+			{{ delimit .Params.alternate_names "; " }}
+				{{/* . */}}
+			{{/* end */}}
+			</p>
+			
+			<p>
+			Bibliography:
+			{{ range .Params.bibliolinks }}
+				[<a href="{{ .url }}">{{ .name }}</a>]
 			{{ end }}
-	</section>
+			</p>
+			
+			{{ range .Params.otherlinks }}
+				<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
+			{{ end }}
+		</section>
+		
+		<section class="showcase_last_n_posts">
+				{{ $name := .Params.showcased_section.name }}
+				{{ $lim := .Params.showcased_section.num_shown_posts }}
+				{{ range (where .Pages "Section" $name) }}
+					<h1>{{ $name }}</h1>
+					{{ range first $lim .Pages }}
+						<li>
+							<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
+						</li>
+					{{ end }}
+					{{ if gt .Pages.Len $lim }}
+						<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
+					{{ end }}
+				{{ end }}
+		</section>
+	</div>
 {{ end }}

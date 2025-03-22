@@ -43,3 +43,9 @@ article {
 	max-width: calc(44em + 2rem);
 	margin: 0 auto;
 }
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+	gap: 1rem;
+}

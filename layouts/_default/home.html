@@ -29,7 +29,6 @@
 				{{ else }}
 					Affiliations:
 				{{ end }}
-				<!-- TODO: use delimit here -->
 				{{range .Params.affiliations }}
 					[<a href="{{ .url }}">{{ .name }}</a>]
 				{{ end }}

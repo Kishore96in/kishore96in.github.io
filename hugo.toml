@@ -1,6 +1,5 @@
 baseURL = "https://kishore96in.github.io/"
 languageCode = "en-in"
-title = "Kishore's homepage"
 pluralizelisttitles = false
 
 [caches]

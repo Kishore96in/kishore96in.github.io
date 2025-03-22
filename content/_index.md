@@ -29,7 +29,7 @@
 	text = "0000-0003-2620-790X"
 	url = "https://orcid.org/0000-0003-2620-790X"
 
-[params.showcased_section]
+[params.showcased_section.1]
 	name = "blog"
 	num_shown_posts = 5
 +++

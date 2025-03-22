@@ -23,10 +23,11 @@
 			{{ end }}
 		</section>
 		
-		<section class="showcase_last_n_posts">
-				{{ $name := .Params.showcased_section.name }}
-				{{ $lim := .Params.showcased_section.num_shown_posts }}
-				{{ range (where .Pages "Section" $name) }}
+		{{ range .Params.showcased_section }}
+			<section class="showcase_last_n_posts">
+				{{ $name := .name }}
+				{{ $lim := .num_shown_posts }}
+				{{ range (where site.Sections "Section" $name) }}
 					<h1>{{ $name }}</h1>
 					{{ range first $lim .Pages }}
 						<li>
@@ -37,6 +38,7 @@
 						<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
 					{{ end }}
 				{{ end }}
-		</section>
+			</section>
+		{{ end }}
 	</div>
 {{ end }}

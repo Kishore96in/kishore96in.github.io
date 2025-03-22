@@ -14,7 +14,9 @@
     {{ end }}
   </ul>
   {{ end }}
-  <h2>Other</h2>
+  {{ if gt .Sections.Len 0 }}
+    <h2>Other</h2>
+  {{ end }}
   <ul>
     {{ range .RegularPages }}
       <li>

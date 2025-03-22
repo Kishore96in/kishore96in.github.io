@@ -21,6 +21,21 @@
 			{{ range .Params.otherlinks }}
 				<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
 			{{ end }}
+			
+			{{ if gt (len .Params.affiliations) 0 }}
+				<p>
+				{{ if eq (len .Params.affiliations) 1 }}
+					Affiliation:
+				{{ else }}
+					Affiliations:
+				{{ end }}
+				<!-- TODO: use delimit here -->
+				{{range .Params.affiliations }}
+					[<a href="{{ .url }}">{{ .name }}</a>]
+				{{ end }}
+				</p>
+			{{ end }}
+			
 		</section>
 		
 		{{ range .Sections }}

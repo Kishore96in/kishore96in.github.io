@@ -28,4 +28,8 @@
 	type = "ORCID"
 	text = "0000-0003-2620-790X"
 	url = "https://orcid.org/0000-0003-2620-790X"
+
+[params.affiliations.1]
+	name = "IUCAA"
+	url = "https://www.iucaa.in/"
 +++

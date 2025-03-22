@@ -35,8 +35,12 @@
 							</li>
 						{{ end }}
 					</ul>
-					{{ if gt .Pages.Len $lim }}
-						<a href="{{ .RelPermalink }}"> and {{ sub .Pages.Len  $lim }} more posts… </a>
+					
+					{{ $remaining := sub .Pages.Len $lim }}
+					{{ if gt $remaining 1 }}
+						<a href="{{ .RelPermalink }}"> and {{ $remaining }} more posts… </a>
+					{{ else if eq $remaining 0}}
+						<a href="{{ .RelPermalink }}"> and {{ $remaining }} more post… </a>
 					{{ end }}
 				</section>
 			{{ end }}

@@ -28,13 +28,15 @@
 				<section class="showcase_last_n_posts">
 					<h1>{{ .Title }}</h1>
 					{{ $lim := .Params.num_showcased_posts }}
-					{{ range first $lim .Pages }}
-						<li>
-							<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
-						</li>
-					{{ end }}
+					<ul>
+						{{ range first $lim .Pages }}
+							<li>
+								<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
+							</li>
+						{{ end }}
+					</ul>
 					{{ if gt .Pages.Len $lim }}
-						<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
+						<a href="{{ .RelPermalink }}"> and {{ sub .Pages.Len  $lim }} more posts… </a>
 					{{ end }}
 				</section>
 			{{ end }}

@@ -1,7 +1,6 @@
 +++
 #date = '2025-03-22'
 #draft = false
-title = "Kishore's home page"
 
 [params]
 	author_name = "G. Kishore"

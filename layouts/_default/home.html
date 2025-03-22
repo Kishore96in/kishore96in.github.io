@@ -23,17 +23,17 @@
 	</div>
 	
 	<div id="blogs">
-			{{ $section_name := "blog" }}
-			{{ $num_pages := 5 }}
-			{{ range (where .Pages "Section" $section_name) }}
-				<h>{{ $section_name }}</h>
-				{{ range first $num_pages .Pages }}
+			{{ $name := .Params.showcased_section.name }}
+			{{ $lim := .Params.showcased_section.num_shown_posts }}
+			{{ range (where .Pages "Section" $name) }}
+				<h1>{{ $name }}</h1>
+				{{ range first $lim .Pages }}
 					<li>
 						<a href="{{ .RelPermalink }}">{{ or .Title .RelPermalink }}</a>
 					</li>
 				{{ end }}
-				{{ if gt .Pages.Len $num_pages }}
-					<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $num_pages }} more posts </a>
+				{{ if gt .Pages.Len $lim }}
+					<a href="{{ .RelPermalink }}"> ... and {{ sub .Pages.Len  $lim }} more posts </a>
 				{{ end }}
 			{{ end }}
 	</div>

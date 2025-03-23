@@ -6,6 +6,12 @@
     <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | {{ .CurrentSection.Title }}{{ end }}</title>
     {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    
+    <!--For math rendering-->
+    {{ $noop := .WordCount }}
+    {{ if .Page.Store.Get "hasMath" }}
+      <link href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" rel="stylesheet">
+    {{ end }}
   </head>
   <body>
     {{ block "page" . }}{{ end }}

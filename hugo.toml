@@ -7,3 +7,10 @@ pluralizelisttitles = false
 	#For caching in GitHub Actions builds
 	[caches.images]
 		dir = ':cacheDir/images'
+
+#For math rendering
+[markup.goldmark.extensions.passthrough]
+	enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+	block = [['\[', '\]'], ['$$', '$$']]
+	inline = [['\(', '\)'], ['$', '$']]

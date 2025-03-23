@@ -1,40 +1,10 @@
 {{ define "page" }}
 	<div class="container">
 		<section class="about_card">
-			<h1>{{ .Params.author_name }}</h1>
-			<p>{{ .Params.subtitle }}</p>
-			
-			<p>
-			Alternate names:
-			{{ delimit .Params.alternate_names "; " }}
-				{{/* . */}}
-			{{/* end */}}
-			</p>
-			
-			<p>
-			Bibliography:
-			{{ range .Params.bibliolinks }}
-				[<a href="{{ .url }}">{{ .name }}</a>]
+			{{ with .Site.GetPage "page" "about.md" }}
+				<h1>{{ .Title }}</h1>
+				{{ .Content }}
 			{{ end }}
-			</p>
-			
-			{{ range .Params.otherlinks }}
-				<p>{{ .type }}: <a href="{{ .url }}">{{ .text }}</a> </p>
-			{{ end }}
-			
-			{{ if gt (len .Params.affiliations) 0 }}
-				<p>
-				{{ if eq (len .Params.affiliations) 1 }}
-					Affiliation:
-				{{ else }}
-					Affiliations:
-				{{ end }}
-				{{range .Params.affiliations }}
-					[<a href="{{ .url }}">{{ .name }}</a>]
-				{{ end }}
-				</p>
-			{{ end }}
-			
 		</section>
 		
 		{{ range .Sections }}

@@ -22,7 +22,7 @@
 					{{- if le $n 2 -}}
 						{{- range $index, $author := (first 2 .author) -}}
 							{{- index . "non-dropping-particle" -}}{{- .family }}
-							{{ if and (gt $n 1) ( eq $index 0) -}} and {{- end -}}
+							{{ if and (gt $n 1) ( eq $index 0) }} and {{ end -}}
 						{{- end -}}
 					{{- end -}}
 					{{- if gt $n 2 -}}

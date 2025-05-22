@@ -12,10 +12,6 @@ url = "blog/phd_thesis"
 +++
 
 A PDF version of my thesis can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.15354916).
-What follows is a synopsis of the thesis.
-
-
-# Structure of the thesis
 
 **Chapter 1** is introductory, while **chapter 13** states the main results of this thesis.
 The rest of the chapters are grouped into six parts, which we now describe.

@@ -33,7 +33,7 @@ This part of the thesis is devoted to the study of the kinematic dynamo.
 Magnetic fields are often correlated at length scales much larger than that of the turbulent velocity field.
 Mean-field magnetohydrodynamics takes advantage of this scale-separation to make the problem analytically tractable
 ({{< cite alp MoffattMagFieldGenBook >}}, {{< cite alp KrauseRadler80 >}}.
-'Large-scale dynamo', or LSD, refers to the generation of magnetic fields ordered on the system scale by fluid motions correlated at much smaller scales.
+*Large-scale dynamo*, or LSD, refers to the generation of magnetic fields ordered on the system scale by fluid motions correlated at much smaller scales.
 
 The statistical properties of the velocity field are often treated as deterministic quantities in kinematic studies.
 **Chapter 3** presents a simple calculation which shows that fluctuations of the turbulent kinetic energy at a particular spatial scale can induce the growth of a magnetic field at much larger scales.
@@ -45,7 +45,7 @@ We then apply the same technique to the evolution equation for the averaged magn
 A previous attempt to solve this problem {{< cite p nicklaus88 >}} turns out to have predicted a turbulent diffusivity for the magnetic field that is the same as that for a passive scalar.
 We find additional contributions to the turbulent diffusion of the magnetic field.
 
-It is well known that in a turbulent fluid, intermittent magnetic fields can be generated which are typically ordered on scales comparable to or smaller than that of the velocity field (the 'small-scale dynamo' or SSD) ({{< cite alp kazantsev1968enhancement >}}, {{< cite alp Molchanov85 >}}).
+It is well known that in a turbulent fluid, intermittent magnetic fields can be generated which are typically ordered on scales comparable to or smaller than that of the velocity field (the *small-scale dynamo* or SSD) ({{< cite alp kazantsev1968enhancement >}}, {{< cite alp Molchanov85 >}}).
 The SSD grows on a timescale comparable to the eddy turnover time; this is much smaller than the timescale for growth of the LSD and the typical ages of astrophysical objects.
 {{< cite t kulsrud92 >}} argue that the presence of SSD-generated magnetic fields invalidates the usual treatment of the LSD.
 While their conclusion has since been challenged (e.g. {{< cite alp Sub98 >}}), magnetic

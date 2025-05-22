@@ -2,7 +2,6 @@
 title = "An overview of my PhD thesis"
 date = "2025-05-22T10:37:37+05:30"
 url = "blog/phd_thesis"
-draft = true
 
 [params]
 	macros = [

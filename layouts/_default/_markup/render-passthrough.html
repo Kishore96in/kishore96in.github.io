@@ -1,6 +1,15 @@
 <!-- For math rendering -->
 <!-- https://gohugo.io/functions/transform/tomath/#step-2 -->
-{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") }}
+
+<!-- Read LaTeX macro definitions from the preamble of the markdown file -->
+{{ $macros := newScratch }}
+{{ range $keyval := .Page.Params.macros }}
+  {{ $key := index $keyval 0 }}
+  {{ $val := index $keyval 1 }}
+  {{ $macros.Set $key $val }}
+{{ end }}
+
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") "macros" $macros.Values }}
 {{- with try (transform.ToMath .Inner $opts) }}
   {{- with .Err }}
     {{- errorf "Unable to render mathematical markup to HTML using the transform.ToMath function. The KaTeX display engine threw the following error: %s: see %s." . $.Position }}

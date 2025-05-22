@@ -46,8 +46,13 @@ article {
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
 	gap: 1rem;
+}
+
+@media (min-width: 50rem) {
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .error {

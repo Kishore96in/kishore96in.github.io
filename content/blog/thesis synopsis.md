@@ -3,6 +3,13 @@ title = "An overview of my PhD thesis"
 date = "2025-05-22T10:37:37+05:30"
 url = "blog/phd_thesis"
 draft = true
+
+[params]
+	macros = [
+		["\\meanBr", "\\left<#1\\right>"],
+		["\\Rm", "\\textrm{Rm}"],
+		["\\Rey", "\\textrm{Re}"],
+		]
 +++
 
 A PDF version of my thesis can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.15354916).

@@ -22,4 +22,4 @@ ORCID:
 Affiliation:
 	[IUCAA](https://www.iucaa.in/)
 
-<!-- TODO: link to PhD thesis once it's on Zenodo -->
+[PhD thesis](blog/phd_thesis)

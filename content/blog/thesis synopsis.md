@@ -17,6 +17,8 @@ A PDF version of my thesis can be downloaded from [Zenodo](https://doi.org/10.52
 **Chapter 1** is introductory, while **chapter 13** states the main results of this thesis.
 The rest of the chapters are grouped into six parts, which we now describe.
 
+{{< toc >}}
+
 ## Part I: Turbulence
 
 **Chapter 2** deals with the generation of anisotropy in rotating forced turbulence.

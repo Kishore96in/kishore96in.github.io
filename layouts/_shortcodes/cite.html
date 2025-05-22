@@ -9,7 +9,7 @@
 {{- $entry := where $json "id" $id -}}
 
 {{- if  eq (len $entry) 0 -}}
-<span class="has-background-danger has-text-white">Not found</span>
+<span class="error">Not found</span>
 {{- end -}}
 {{- range $entry -}}
 
@@ -115,7 +115,7 @@ Anonymous
 {{- end -}}
 {{- end -}}
 {{- else -}}
-<span class="has-background-danger has-text-white">No file</span>
+<span class="error">No file</span>
 {{- end -}}
 
 

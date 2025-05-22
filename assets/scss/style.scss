@@ -49,3 +49,9 @@ article {
 	grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
 	gap: 1rem;
 }
+
+.error {
+	//Used for error messages
+	color: white;
+	background-color: red;
+}

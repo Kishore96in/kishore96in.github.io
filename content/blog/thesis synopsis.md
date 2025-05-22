@@ -72,16 +72,15 @@ In **chapter 7** we describe major discrepancies between results from different 
 
 ## Part V: Convection and plumes
 
-**Chapter 8** studies the evolution of a cool blob of fluid (a \emph{thermal}) descending in a stably stratified background.
+**Chapter 8** studies the evolution of a cool blob of fluid (a *thermal*) descending in a stably stratified background.
 The motivation here is to understand overshoot by using semi-analytic models for the evolution of a thermal.
 We find a scaling relation between the initial size of the thermal and the depth of its penetration.
 We also show that assumptions about the internal structure of the thermal have a much stronger effect on its dynamics than expected.
 
 Supposing one understands the dynamics of isolated blobs of fluid, one then has to construct additional models for
-\begin{enuminline}
-	\item how multiple blobs interact; and
-	\item how such flows affect the background state.
-\end{enuminline}
+- how multiple blobs interact; and
+- how such flows affect the background state.
+
 Given the vast differences between experimentally accessible regimes and stellar regimes, three-dimensional numerical simulations are indispensable to motivate such models (or, for that matter, to guide the construction of any theory of stellar convection).
 One of the challenges in solving the convective conundrum is the limited parameter regime that is computationally accessible.
 **Chapter 9** constructs a shell model for stratified convection to qualitatively study the effects of this restriction.

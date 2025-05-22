@@ -1,6 +1,10 @@
 {{ define "page" }}
 <article class="container">
-  <a href="{{ .CurrentSection.RelPermalink }}">Back to {{ .CurrentSection.Title }}</a>
+  {{ if .CurrentSection.Title }}
+    <a href="{{ .CurrentSection.RelPermalink }}">Back to {{ .CurrentSection.Title }}</a>
+  {{ else }}
+    <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
+  {{ end }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 </article>

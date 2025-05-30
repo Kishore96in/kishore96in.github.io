@@ -3,7 +3,7 @@ title = "G. Kishore"
 headless = true
 +++
 
-Physicist and FOSS enthusiast
+Physicist and [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) enthusiast
 
 *Alternate names*:
 	Kishore Gopalakrishnan,

@@ -74,7 +74,7 @@ In **chapter 5**, we use the technique described in chapter [4](#chapter-4) to f
 
 {{< anchor chapter-6 >}}
 We earlier mentioned that the magnetic activity of the Sun depends on the latitude.
-In the CZ, the flows themselves are anisotropic, with the vertical component being larger than the horizontal components.
+In the CZ (convection zone), the flows themselves are anisotropic, with the vertical component being larger than the horizontal components.
 The rotation of the Sun is another source of anisotropy for the flows.
 The angle between the direction of gravity and the rotational axis is dependent on the latitude.
 In **chapter 6**, we use simulations of anisotropically forced turbulence in rotating domains (with the direction of anisotropy allowed to be different from the rotational axis) to find out how the growth rate and the saturation level of the SSD are affected.

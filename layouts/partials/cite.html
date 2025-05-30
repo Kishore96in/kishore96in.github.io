@@ -53,7 +53,9 @@
 				{{- $year := index . 0 -}}
 				{{- $year = index $year 0 -}}
 				{{- if or (eq $tp "t") (eq $tp "f") }}({{- end -}} <!--Opening parenthesis for textcite and fullcite-->
+				{{- if ne $tp "f"}}<a href="#{{- $id -}}">{{- end -}} <!--Link that points to the corresponding bibliography entry-->
 				{{- strings.TrimRight "]" (strings.TrimLeft "[" $year) -}}
+				{{- if ne $tp "f"}}</a>{{- end -}}
 				{{- if not (eq $tp "alp") -}}){{- end -}} <!--Closing parenthesis for all-->
 			{{- end -}}
 			

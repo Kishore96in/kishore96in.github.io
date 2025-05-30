@@ -122,7 +122,7 @@ Helioseismology uses observations of the amplitudes and frequencies of these mod
 
 {{< anchor chapter-11 >}}
 One expects a particular mode to not be strongly dependent on the solar structure in regions where its eigenfunction is small.
-This is motivated by the fact that if a perturbation is added to a wave evolution equation, time-independent perturbation theory tells us that to the lowest order in the perturbation, the frequency shift of a particular mode is given by the trace of the projection of the perturbation onto the corresponding eigenmode ({{< cite p SakuraiMQM>}}, p. 304).
+This is motivated by the fact that if a perturbation is added to a wave evolution equation, time-independent perturbation theory tells us that to the lowest order in the perturbation, the frequency shift of a particular mode is given by the trace of the projection of the perturbation onto the corresponding eigenmode ({{< cite alp SakuraiMQM>}}, p. 304).
 Thus, it is important to understand how the eigenfunctions of various modes depend on the radius.
 **Chapter 11** examines a long-standing debate about the number of radial nodes of the lowest p mode.
 We find that the number of radial nodes of a particular p mode depends on the wavenumber.

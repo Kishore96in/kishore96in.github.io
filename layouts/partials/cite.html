@@ -1,9 +1,10 @@
 <!-- Set variables -->
-{{- $tp := .Get 0 -}}
-{{- $id := .Get 1 -}}
+{{- $context := .context -}}
+{{- $tp := .type -}}
+{{- $id := .id -}}
 {{- $json := dict -}}
 
-{{- with try (resources.Get .Page.Params.bib) -}}
+{{- with try (resources.Get $context.Page.Params.bib) -}}
 	{{- with .Value -}}
 		{{- $json = . | transform.Unmarshal -}}
 		{{- $entry := where $json "id" $id -}}
@@ -58,6 +59,7 @@
 			
 			<!--Fullcite-->
 			{{- if eq $tp "f" -}}.
+				<!--TODO: tex rendering is needed for the title in some cases. Safe to enable unconditionally?-->
 				<!-- Title  -->
 				{{- if or (eq .type "book") (eq .type  "thesis") -}}
 					<em>{{ title .title }}</em>
@@ -130,8 +132,10 @@
 			{{- end -}}
 			
 			<!--To keep track (later, for bibliography construction) which keys have been used so far-->
-			{{- $.Page.Store.SetInMap "usedCiteKeys" $id (dict) -}}
-			{{- /* $.Page.Store.Add "citedAuthors" "??" */ -}} <!--TODO: deduplicate entries with the same authorname+year (add a,b,... after the year)-->
+			{{- if ne $tp "_f" -}}
+				{{- $context.Page.Store.SetInMap "usedCiteKeys" $id (dict) -}}
+				{{- /* $.Page.Store.Add "citedAuthors" "??" */ -}} <!--TODO: deduplicate entries with the same authorname+year (add a,b,... after the year)-->
+			{{- end -}}
 		{{- end -}} <!--range $entry-->
 	{{- else -}}
 		<span class="error">No bibliography file</span>

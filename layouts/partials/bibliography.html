@@ -10,6 +10,6 @@
 	<h1>Bibliography</h1>
 	{{ range $id, $w := $usedCiteKeys -}}
 		<!--TODO: does not obey the font chosen for the rest of the page.-->
-		<li>{{ partial "cite.html" (dict "context" $.Page "type" "f" "id" $id) }}</li>
+		<li><a name="{{ $id }}"></a>{{ partial "cite.html" (dict "context" $.Page "type" "f" "id" $id) }}</li>
 	{{- end -}}
 {{- end -}}

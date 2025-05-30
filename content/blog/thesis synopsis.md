@@ -19,14 +19,14 @@ The rest of the chapters are grouped into six parts:
 
 {{< toc >}}
 
-Before describing them, here is a list of papers based on various parts of the thesis:
+Before describing them, here is a list of papers based on my thesis:
 
-- {{< cite f GopSin23 >}} (based on chapter [3](#chapter-3))
-- {{< cite f GopSin24 >}} (based on chapter [5](#chapter-5))
-- [2409.14840](https://arxiv.org/abs/2409.14840) (based on chapter [12](#chapter-12))
-- [2502.02946](https://arxiv.org/abs/2502.02946) (based on chapter [4](#chapter-4))
-- [2502.17178](https://arxiv.org/abs/2502.17178) (based on chapters [2](#chapter-2) and [6](#chapter-6))
-- [2503.03332](https://arxiv.org/abs/2503.03332) (based on chapter [7](#chapter-7))
+1. {{< cite f GopSin23 >}} (based on chapter [3](#chapter-3))
+1. {{< cite f GopSin24 >}} (based on chapter [5](#chapter-5))
+1. [2409.14840](https://arxiv.org/abs/2409.14840) (based on chapter [12](#chapter-12))
+1. [2502.02946](https://arxiv.org/abs/2502.02946) (based on chapter [4](#chapter-4))
+1. [2502.17178](https://arxiv.org/abs/2502.17178) (based on chapters [2](#chapter-2) and [6](#chapter-6))
+1. [2503.03332](https://arxiv.org/abs/2503.03332) (based on chapter [7](#chapter-7))
 
 ## Part I: Turbulence
 

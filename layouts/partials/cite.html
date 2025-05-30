@@ -134,7 +134,7 @@
 			{{- end -}}
 			
 			<!--To keep track (later, for bibliography construction) which keys have been used so far-->
-			{{- if ne $tp "_f" -}}
+			{{- if ne $tp "f" -}}
 				{{- $context.Page.Store.SetInMap "usedCiteKeys" $id (dict) -}}
 				{{- /* $.Page.Store.Add "citedAuthors" "??" */ -}} <!--TODO: deduplicate entries with the same authorname+year (add a,b,... after the year)-->
 			{{- end -}}

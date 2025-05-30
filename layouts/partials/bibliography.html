@@ -7,7 +7,9 @@
 {{- end -}}
 {{- if compare.Gt $nkeys 0 -}}
 	<h1>Bibliography</h1>
+	<ul>
 	{{ range $id, $w := $usedCiteKeys -}}
 		<li><a name="{{ $id }}"></a>{{ partial "cite.html" (dict "context" $.Page "type" "f" "id" $id) }}</li>
 	{{- end -}}
+	</ul>
 {{- end -}}

@@ -6,9 +6,13 @@
 	{{- $nkeys = $usedCiteKeys | len -}}
 {{- end -}}
 {{- if compare.Gt $nkeys 0 -}}
+	<!--TODO: h1 or h2?-->
 	<h1>Bibliography</h1>
 	{{ range $id, $w := $usedCiteKeys -}}
+		<!--TODO: does not obey the font chosen for the rest of the page.-->
 		<li>{{ partial "cite.html" (dict "context" $.Page "type" "f" "id" $id) }}</li>
 	{{- end -}}
-<!-- 	</div> -->
+{{- else -}}
+	<!--DANGER only for debugging-->
+	<span class="error">No citations</span>
 {{- end -}}

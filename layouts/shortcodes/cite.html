@@ -120,11 +120,11 @@
 				{{- end -}}
 				
 				<!-- Hyperlinks -->
-				{{- if .DOI -}}
+				{{ if .DOI -}}
 					doi: <a href="https://doi.org/{{ .DOI }}" title="{{ .title }}" target="_blank">{{ .DOI }}</a>.
 				{{- end -}}
 				
-				{{- if and .URL (not .DOI) -}}
+				{{ if and .URL (not .DOI) -}}
 					<a href="{{ .URL }}" title="{{ .title }}" target="_blank">{{ .URL }}</a>.
 				{{- end -}}
 			{{- end -}}

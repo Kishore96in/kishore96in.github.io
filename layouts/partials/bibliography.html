@@ -12,7 +12,4 @@
 		<!--TODO: does not obey the font chosen for the rest of the page.-->
 		<li>{{ partial "cite.html" (dict "context" $.Page "type" "f" "id" $id) }}</li>
 	{{- end -}}
-{{- else -}}
-	<!--DANGER only for debugging-->
-	<span class="error">No citations</span>
 {{- end -}}

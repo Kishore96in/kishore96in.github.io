@@ -6,7 +6,7 @@
 	{{ $max_index := len . }}
 	<section class="tags_list">
 		{{ if gt $max_index 0 }}
-		<h1>Related posts</h1>
+		<h1>Tags</h1>
 		{{ range $index, $tag := . }}
 			{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
 				{{- if gt $max_index 1 -}}

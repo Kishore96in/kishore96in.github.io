@@ -1,0 +1,18 @@
+<!-- Check if all the tags on the current page are valid. Valid tags are folders in content/tags/ with params.valid set to true in the frontmatter.-->
+
+{{ $valid_tags := slice }}
+{{ with .Site.GetPage "/tags" }}
+	{{ range .Pages }}
+		{{ if .Params.valid }}
+			{{ $valid_tags = append (.Name | urlize) $valid_tags }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+{{ with .Param "tags" }}
+	{{ range . }}
+		{{ if not (in $valid_tags .) }}
+			{{ errorf "Invalid tag %s in file %s. Allowed tags are %s" . $.File $valid_tags }}
+		{{ end }}
+	{{ end }}
+{{ end }}

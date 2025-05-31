@@ -1,5 +1,7 @@
 {{ define "page" }}
 <article>
+  {{ partial "validate_tags.html" . }}
+  
   <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
   <h1>{{ .Title }}</h1>
   {{ partial "tags.html" . }}

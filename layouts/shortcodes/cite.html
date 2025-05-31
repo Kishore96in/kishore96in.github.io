@@ -1,4 +1,4 @@
 {{/* From https://flaviocopes.com/hugo-partial-multiple-parameters */}}
 {{- $tp := .Get 0 -}}
 {{- $id := .Get 1 -}}
-{{- partial "cite.html" (dict "context" . "type" $tp "id" $id) -}}
+{{- partial "cite/cite.html" (dict "context" . "type" $tp "id" $id) -}}

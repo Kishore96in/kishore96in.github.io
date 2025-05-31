@@ -1,10 +1,6 @@
 {{ define "page" }}
 <article>
-  {{ if .CurrentSection.Title }}
-    <a href="{{ .CurrentSection.RelPermalink }}">Back to {{ .CurrentSection.Title }}</a>
-  {{ else }}
-    <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
-  {{ end }}
+  <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ partial "cite/bibliography.html" . }}

@@ -55,5 +55,8 @@ And here is the same citation in brackets: {{< cite p kapyla2019Lambda >}}.
 Let us also cite {{< cite t LeiSte81 >}} and {{< cite t Chr02 >}}.
 All these entries will appear in the [bibliography](#bibliography).
 
+Here is a full citation which will not be added to the bibliography:
+{{< cite f MoffattMagFieldGenBook >}}
+
 Here is another work by Käpylä: {{< cite t Kap19 >}}.
 Note how a suffix has been added to the year to distinguish it from another (previously cited) study by the same author in the same year {{< cite p kapyla2019Lambda >}}.

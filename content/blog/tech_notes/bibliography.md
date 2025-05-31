@@ -19,7 +19,7 @@ Automatic printing of the bibliography is done thorough a line at the end of `la
 
 ## Creating a bibliography file
 
-If you have your references in a [bibtex](https://en.wikipedia.org/wiki/BibTeX) file, you can generate the required [CSL](https://docs.citationstyles.org/en/stable/specification.html) file by running
+If you have your references in a [bibtex](https://en.wikipedia.org/wiki/BibTeX) file, you can generate the required [CSL-JSON](https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html) file by running
 ```bash
 pandoc refs.bib -t csljson -o global_refs.json
 ```

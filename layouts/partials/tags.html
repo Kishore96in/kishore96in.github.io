@@ -1,9 +1,12 @@
 <!--https://www.jakewiesler.com/blog/hugo-taxonomies-->
-<section class="tags_list">
-	<h1>Related posts</h1>
-	{{ $taxonomy := "tags" }}
-	{{ with .Param $taxonomy }}
-		{{ $max_index := len . }}
+<!--Print a list of the tags in the current page-->
+
+{{ $taxonomy := "tags" }}
+{{ with .Param $taxonomy }}
+	{{ $max_index := len . }}
+	<section class="tags_list">
+		{{ if gt $max_index 0 }}
+		<h1>Related posts</h1>
 		{{ range $index, $tag := . }}
 			{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
 				<a href="{{ .Permalink }}">{{ $tag }}</a>
@@ -14,5 +17,6 @@
 				,
 			{{- end -}}
 		{{- end }}
-	{{ end }}
-</section>
+		{{ end }}
+	</section>
+{{ end }}

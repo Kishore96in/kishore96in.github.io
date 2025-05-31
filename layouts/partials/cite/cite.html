@@ -20,34 +20,25 @@ Supported types:
 		{{- end -}}
 		<!--TODO: why does it make sense to have more than one entry with the same key?-->
 		{{- range $entry -}}
-			<!-- Author / editor and year -->
 			{{- $austring:= (partial "cite/get_author.html" (dict "entry" . "tp" $tp)) -}}
 			
 			<!--Used later to keep track of whether this author has been cited before-->
 			{{- $citedYearsLabelThisAuthor := (printf "citedYears:%s" $austring) -}}
 			
 			{{- $yearstring:= (partial "cite/get_year.html" (dict "entry" . "tp" $tp "store" $.context.Page.Store "citedYearsLabel" $citedYearsLabelThisAuthor "id" $id)) -}}
+			{{- $yearstring:= strings.TrimSpace $yearstring -}} <!--NOTE: the year has a preceding space if this is not done.-->
 			
-			{{- if .author -}}
-				{{- if eq $tp "p" -}}({{- end -}} <!--Opening parenthesis for parencite-->
-			{{- end -}}
-			{{- $austring -}}
-			{{- if or (eq $tp "t") (eq $tp "f") }}({{- end -}} <!--Opening parenthesis for textcite and fullcite-->
-			
-			{{- if eq $tp "f" -}}
-				{{- $yearstring -}}
+			{{- if eq $tp "p" -}}
+				({{- $austring }} <a href="#{{- $id -}}">{{- $yearstring -}}</a>)
+			{{- else if eq $tp "t" -}}
+				{{- $austring }} (<a href="#{{- $id -}}">{{- $yearstring -}}</a>)
+			{{- else if eq $tp "f" -}}
+				{{- $austring }} ({{ $yearstring -}})
 			{{- else -}}
-				<a href="#{{- $id -}}">{{- $yearstring -}}</a>
+				{{- $austring -}} <a href="#{{- $id -}}">{{- $yearstring -}}</a>
 			{{- end -}}
 			
-			{{- if not (eq $tp "alp") -}}
-				)
-				<!--Closing parenthesis for all-->
-			{{ end -}}
-			
-			<!--Fullcite-->
 			{{- if eq $tp "f" -}}.
-				<!--TODO: tex rendering is needed for the title in some cases. Safe to enable unconditionally?-->
 				<!-- Title  -->
 				{{- if or (eq .type "book") (eq .type  "thesis") -}}
 					<em>{{ title .title }}</em>

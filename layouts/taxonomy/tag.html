@@ -1,0 +1,11 @@
+{{ define "page" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages }}
+    <h2>{{ .LinkTitle }}</h2>
+    {{ .Summary }}
+    <a href="{{ .RelPermalink }}">(read more…)</a>
+  {{ end }}
+</article>
+{{ end }}

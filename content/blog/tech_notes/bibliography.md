@@ -7,6 +7,9 @@ url = "blog/bibliography-hugo"
 	bib = "global_refs.json"
 +++
 
+The content of this website is generated from a set of Markdown files using Hugo.
+To manage citations in blog posts, the simplest option is to manually add footnotes, links, etc., which is a pain.
+
 I have implemented a set of shortcodes to manage citations of papers in my blog posts. These started off as a copy of the shortcodes implemented in the '[third hemisphere](https://github.com/pprevos/hugo-thirdhemisphere/)' Hugo theme[^note_third_hemi], but have now been extensively modified to suit my needs.
 
 [^note_third_hemi]: Described at <https://lucidmanager.org/productivity/hugo-bibliography/>

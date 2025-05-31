@@ -7,13 +7,16 @@ url = "blog/bibliography-hugo"
 	bib = "global_refs.json"
 +++
 
-I have implemented a set of shortcodes to manage citations of papers in my blog posts. These started off as a copy of the shortcodes implemented in the 'third hemisphere' Hugo theme[^note_third_hemi], but have now been extensively modified to suit my needs.
+I have implemented a set of shortcodes to manage citations of papers in my blog posts. These started off as a copy of the shortcodes implemented in the '[third hemisphere](https://github.com/pprevos/hugo-thirdhemisphere/)' Hugo theme[^note_third_hemi], but have now been extensively modified to suit my needs.
 
 [^note_third_hemi]: Described at <https://lucidmanager.org/productivity/hugo-bibliography/>
 
 ## The code
 
-You can view the code at the git repository associated with this website (<https://github.com/Kishore96in/kishore96in.github.io/tree/main/layouts/partials>).
+You can view the code at the git repository associated with this website,[^note_website_repo] under the folder `layouts/partials`.
+A small wrapper to allow the use of the cite function in markdown files is at `shortcodes/cite.html`.
+
+[^note_website_repo]: <https://github.com/Kishore96in/kishore96in.github.io/>
 
 ## Creating a bibliography file
 

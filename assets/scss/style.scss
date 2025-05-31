@@ -71,3 +71,11 @@ article {
 		font-size: 1.8rem;
 	}
 }
+
+.about_card {
+	background-color: $bg_yellow;
+}
+
+.about_card, .showcase_last_n_posts {
+	padding: 2rem;
+}

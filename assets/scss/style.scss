@@ -1,5 +1,6 @@
 $paradise-pink: #EA1F4B;
 $paradise-pink-light: #EF5778;
+$bg_yellow: seashell;
 
 html {
 	// https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
@@ -59,4 +60,14 @@ article {
 	//Used for error messages
 	color: white;
 	background-color: red;
+}
+
+.tags_list {
+	//List of tags, shown at the end of each post.
+	background-color: $bg_yellow;
+	h1 {
+		display: inline-block;
+		margin-right: 1rem;
+		font-size: 1.8rem;
+	}
 }

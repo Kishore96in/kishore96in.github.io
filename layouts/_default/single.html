@@ -2,7 +2,9 @@
 <article>
   <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
   <h1>{{ .Title }}</h1>
+  {{ partial "tags.html" . }}
   {{ .Content }}
+  {{ partial "tags.html" . }}
   {{ partial "cite/bibliography.html" . }}
 </article>
 {{ end }}

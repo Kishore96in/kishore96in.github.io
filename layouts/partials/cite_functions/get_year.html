@@ -1,4 +1,6 @@
 {{- $tp := .type -}}
+{{- $pagestore := .store -}}
+{{- $austring := .austring -}}
 
 {{- with .entry -}}
 	{{- $id := .id -}}
@@ -6,6 +8,7 @@
 		<!--issued has a key, date-parts, which is of the form [[yyyy,mm,dd]]-->
 		{{- $year := index . 0 -}}
 		{{- $year = index $year 0 -}}
-		{{- strings.TrimRight "]" (strings.TrimLeft "[" $year) -}}
+		{{- $yearstring := (strings.TrimRight "]" (strings.TrimLeft "[" $year)) -}}
+		{{- $yearstring -}}
 	{{- end -}}
 {{- end -}}

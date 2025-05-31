@@ -22,7 +22,7 @@ Supported types:
 		{{- range $entry -}}
 			<!-- Author / editor and year -->
 			{{- $austring:= (partial "cite_functions/get_author.html" (dict "entry" . "tp" $tp)) -}}
-			{{- $yearstring:= (partial "cite_functions/get_year.html" (dict "entry" . "tp" $tp)) -}}
+			{{- $yearstring:= (partial "cite_functions/get_year.html" (dict "entry" . "tp" $tp "austring" $austring "store" $.context.Page.Store)) -}}
 			
 			{{- if .author -}}
 				{{- if eq $tp "p" -}}({{- end -}} <!--Opening parenthesis for parencite-->
@@ -118,7 +118,17 @@ Supported types:
 			<!--To keep track (later, for bibliography construction) which keys have been used so far-->
 			{{- if ne $tp "f" -}}
 				{{- $context.Page.Store.SetInMap "usedCiteKeys" $id (dict) -}}
-				{{- /* $.Page.Store.Add "citedAuthors" "??" */ -}} <!--TODO: deduplicate entries with the same authorname+year (add a,b,... after the year)-->
+				
+				{{- with try ($context.Page.Store.Get "citeLabels") -}}
+					{{- with .Value -}}
+					{{- else -}}
+						{{- $context.Page.Store.Set "citeLabels" slice -}}
+					{{- end -}}
+				{{- end -}}
+				{{- $key := (printf "%s:%s" $austring $yearstring) -}}
+				{{- if not (in ($context.Page.Store.Get "citeLabels") $key) -}}
+					{{- $context.Page.Store.Add "citeLabels" $key -}}
+				{{- end -}}
 			{{- end -}}
 		{{- end -}} <!--range $entry-->
 	{{- else -}}

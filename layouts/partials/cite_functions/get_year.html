@@ -1,6 +1,7 @@
 {{- $tp := .type -}}
 {{- $pagestore := .store -}}
-{{- $austring := .austring -}}
+{{- $citedYearsLabel := .citedYearsLabel -}}
+{{- $id := .id -}}
 
 {{- with .entry -}}
 	{{- $id := .id -}}
@@ -9,6 +10,42 @@
 		{{- $year := index . 0 -}}
 		{{- $year = index $year 0 -}}
 		{{- $yearstring := (strings.TrimRight "]" (strings.TrimLeft "[" $year)) -}}
+		
+		<!--BEGIN deduplication logic-->
+		{{- with try ($pagestore.Get $citedYearsLabel) -}}
+			<!--Initialize with empty slice if not present-->
+			{{- with .Value -}}
+			{{- else -}}
+				{{- $pagestore.Set $citedYearsLabel dict -}}
+			{{- end -}}
+		{{- end -}}
+		
+		{{- $years_this_author := $pagestore.Get $citedYearsLabel -}}
+		
+		{{- $id_previously_cited := false -}}
+		{{- range $key, $value := $years_this_author -}}
+			{{- if eq $value $id -}}
+				{{- $id_previously_cited = true -}}
+				
+				<!--Use the same year string as last time-->
+				{{- $yearstring = $key -}}
+			{{- end -}}
+		{{- end -}}
+		
+		{{- if $id_previously_cited -}}
+			<!--Already handled above in the loop, so do nothing-->
+		{{- else if isSet $years_this_author $yearstring -}}
+			<!--This work has not been cited before, but the same author has another publication in the same year, so come up with a new unique key-->
+			{{- $counter := len $years_this_author -}}
+			{{- $yearstring = (printf "%s_%d" $yearstring $counter) -}}
+			{{- $pagestore.SetInMap $citedYearsLabel $yearstring $id -}}
+		{{- else -}}
+			<!--This work has not been cited before, and $yearstring has not been used before for this same author. Just mark this yearstring as used and proceed-->
+			{{- $pagestore.SetInMap $citedYearsLabel $yearstring $id -}}
+		{{- end -}}
+		<!--END deduplication logic-->
+		
+		<!--Finally, print the year-->
 		{{- $yearstring -}}
 	{{- end -}}
 {{- end -}}

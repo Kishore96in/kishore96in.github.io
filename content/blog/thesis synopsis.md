@@ -44,7 +44,7 @@ This part of the thesis is devoted to the study of the kinematic dynamo.
 
 Magnetic fields are often correlated at length scales much larger than that of the turbulent velocity field.
 Mean-field magnetohydrodynamics takes advantage of this scale-separation to make the problem analytically tractable
-({{< cite alp MoffattMagFieldGenBook >}}, {{< cite alp KrauseRadler80 >}}.
+({{< cite alp MoffattMagFieldGenBook >}}, {{< cite alp KrauseRadler80 >}}).
 *Large-scale dynamo*, or LSD, refers to the generation of magnetic fields ordered on the system scale by fluid motions correlated at much smaller scales.
 
 {{< anchor chapter-3 >}}

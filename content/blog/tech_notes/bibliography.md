@@ -13,10 +13,8 @@ I have implemented a set of shortcodes to manage citations of papers in my blog 
 
 ## The code
 
-You can view the code at the git repository associated with this website,[^note_website_repo] under the folder `layouts/partials`.
+You can view the code at the [Git repository](https://github.com/Kishore96in/kishore96in.github.io/) associated with this website, under the folder `layouts/partials`.
 A small wrapper to allow the use of the cite function in markdown files is at `shortcodes/cite.html`.
-
-[^note_website_repo]: <https://github.com/Kishore96in/kishore96in.github.io/>
 
 ## Creating a bibliography file
 

@@ -9,7 +9,11 @@
 		<h1>Related posts</h1>
 		{{ range $index, $tag := . }}
 			{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-				<a href="{{ .Permalink }}">{{ $tag }}</a>
+				{{- if gt $max_index 1 -}}
+					<a href="{{ .Permalink }}">{{ $tag }} ({{ $max_index }} posts)</a>
+				{{- else -}}
+					<a href="{{ .Permalink }}">{{ $tag }} ({{ $max_index }} post)</a>
+				{{- end -}}
 			{{- end -}}
 			{{- if eq $index (math.Sub $max_index 1) -}}
 				.

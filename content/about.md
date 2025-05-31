@@ -8,6 +8,7 @@ Physicist and [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software
 *Alternate names*:
 	Kishore Gopalakrishnan,
 	G. Kishore
+	([why?](https://www.noenthuda.com/2013/02/17/swaminathan-ganesh-and-murali-vijay-and-the-art-of-south-indian-patronymics/))
 
 *Affiliation*:
 	[IUCAA](https://www.iucaa.in/)

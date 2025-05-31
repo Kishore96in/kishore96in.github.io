@@ -50,15 +50,14 @@ The bibliography is implemented as a partial which can be included in the HTML t
 
 ## Examples
 
-Here is a text citation: {{< cite t kapyla2019Lambda >}}.
-And here is the same citation in brackets: {{< cite p kapyla2019Lambda >}}.
-Let us also cite {{< cite t LeiSte81 >}} and {{< cite t Chr02 >}}.
+- Here is a text citation: {{< cite t kapyla2019Lambda >}}.
+- And here is the same citation in brackets: {{< cite p kapyla2019Lambda >}}.
+- Let us also cite {{< cite t LeiSte81 >}} and {{< cite t Chr02 >}}.
+- For the sake of completeness, `alp` looks like this: {{< cite alp kapyla2019Lambda >}}.
+- Here is another work by Käpylä: {{< cite t Kap19 >}}.
+Note how a suffix has been added to the year to distinguish it from another (previously cited) study by the same author in the same year {{< cite p kapyla2019Lambda >}}.
+
 All these entries will appear in the [bibliography](#bibliography).
 
 Here is a full citation which will not be added to the bibliography:
 {{< cite f MoffattMagFieldGenBook >}}
-
-Here is another work by Käpylä: {{< cite t Kap19 >}}.
-Note how a suffix has been added to the year to distinguish it from another (previously cited) study by the same author in the same year {{< cite p kapyla2019Lambda >}}.
-
-For the sake of completeness, `alp` looks like this: {{< cite alp kapyla2019Lambda >}}.

@@ -17,7 +17,7 @@ You can view the code at the git repository associated with this website (<https
 
 ## Creating a bibliography file
 
-If you have your references in a bibtex file, you can generate the required CSL file by running
+If you have your references in a [bibtex](https://en.wikipedia.org/wiki/BibTeX) file, you can generate the required [CSL](https://docs.citationstyles.org/en/stable/specification.html) file by running
 ```bash
 pandoc refs.bib -t csljson -o global_refs.json
 ```
@@ -25,7 +25,7 @@ Copy this JSON file to the `assets` folder of your website.
 
 ##  Usage
 
-In the preamble (TOML format) of your blog post, add
+In the preamble ([TOML](https://toml.io/en/) format) of your blog post, add
 ```toml
 [params]
 	bib = "global_refs.json"

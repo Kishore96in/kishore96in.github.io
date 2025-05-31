@@ -1,0 +1,54 @@
++++
+title = "Bibliography management in Hugo"
+date = "2025-05-31T13:35:34+05:30"
+url = "blog/bibliography-hugo"
+
+[params]
+	bib = "global_refs.json"
++++
+
+I have implemented a set of shortcodes to manage citations of papers in my blog posts. These started off as a copy of the shortcodes implemented in the 'third hemisphere' Hugo theme[^note_third_hemi], but have now been extensively modified to suit my needs.
+
+[^note_third_hemi]: Described at <https://lucidmanager.org/productivity/hugo-bibliography/>
+
+## The code
+
+You can view the code at the git repository associated with this website (<https://github.com/Kishore96in/kishore96in.github.io/tree/main/layouts/partials>).
+
+## Creating a bibliography file
+
+If you have your references in a bibtex file, you can generate the required CSL file by running
+```bash
+pandoc refs.bib -t csljson -o global_refs.json
+```
+Copy this JSON file to the `assets` folder of your website.
+
+##  Usage
+
+In the preamble (TOML format) of your blog post, add
+```toml
+[params]
+	bib = "global_refs.json"
+```
+You can then cite references by using the following shortcodes:
+```markdown
+Textcite: {{</* cite t CITE_KEY */>}}
+Parencite: {{</* cite p CITE_KEY */>}}
+Parencite without brackets: {{</* cite alp CITE_KEY */>}}
+Fullcite: {{</* cite f CITE_KEY */>}}
+```
+Entries cited in this way (except for fullcite) will be added to the bibliography automatically).
+The bibliography is implemented as a partial which can be included in the HTML templates using
+```html
+{{ partial "bibliography.html" . }}
+```
+
+## Examples
+
+Here is a text citation: {{< cite t kapyla2019Lambda >}}.
+And here is the same citation in brackets: {{< cite p kapyla2019Lambda >}}.
+Let us also cite {{< cite t LeiSte81 >}} and {{< cite t Chr02 >}}.
+All these entries will appear in the [bibliography](#bibliography).
+
+Here is another work by Käpylä: {{< cite t Kap19 >}}.
+Note how a suffix has been added to the year to distinguish it from another (previously cited) study by the same author in the same year {{< cite p kapyla2019Lambda >}}.

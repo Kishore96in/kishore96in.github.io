@@ -20,50 +20,26 @@ Supported types:
 		{{- end -}}
 		<!--TODO: why does it make sense to have more than one entry with the same key?-->
 		{{- range $entry -}}
-			<!-- Author / editor -->
-			{{- if or .author .editor -}}
-				{{- if .author -}}
-					<!--TODO: should this opening bracket not be at the beginning of the `range $entry` block?-->
-					{{- if eq $tp "p" -}}({{- end -}} <!--Opening parenthesis for parencite-->
-					{{- $n := len .author -}}
-					{{- if le $n 2 -}}
-						{{- range $index, $author := (first 2 .author) -}}
-							{{- index . "non-dropping-particle" -}}{{- .family }}
-							{{ if and (gt $n 1) ( eq $index 0) }} and {{ end -}}
-						{{- end -}}
-					{{- end -}}
-					{{- if gt $n 2 -}}
-						{{- range first 1 .author -}}
-							{{- index . "non-dropping-particle" }}{{ .family }}
-						{{- end }} et al.
-					{{ end -}}
-				{{- else -}}
-					{{- if .editor -}}
-						{{- $n := len .editor -}}
-						{{- if le $n 2 -}}
-							{{- range $index, $author := (first 2 .editor) }}
-								{{- index . "non-dropping-particle" }}{{- .family }} {{- if and (gt $n 1) ( eq $index 0) }}and {{- end }}
-							{{- end }}
-						{{- end }}
-						{{- if gt $n 2}}{{- range first 1 .editor}}{{- index . "non-dropping-particle" }} {{- .family }}{{- end }} et al. {{- end }}
-						(Ed{{- if gt $n 1 }}s{{- end }}.)
-					{{- end -}}
-				{{- end -}}
+			<!-- Author / editor and year -->
+			{{- $austring:= (partial "cite_functions/get_author.html" (dict "entry" . "tp" $tp)) -}}
+			{{- $yearstring:= (partial "cite_functions/get_year.html" (dict "entry" . "tp" $tp)) -}}
+			
+			{{- if .author -}}
+				{{- if eq $tp "p" -}}({{- end -}} <!--Opening parenthesis for parencite-->
+			{{- end -}}
+			{{- $austring -}}
+			{{- if or (eq $tp "t") (eq $tp "f") }}({{- end -}} <!--Opening parenthesis for textcite and fullcite-->
+			
+			{{- if eq $tp "f" -}}
+				{{- $yearstring -}}
 			{{- else -}}
-				Anonymous
+				<a href="#{{- $id -}}">{{- $yearstring -}}</a>
 			{{- end -}}
 			
-			<!-- Year -->
-			{{- range .issued -}}
-				<!--issued has a key, date-parts, which is of the form [[yyyy,mm,dd]]-->
-				{{- $year := index . 0 -}}
-				{{- $year = index $year 0 -}}
-				{{- if or (eq $tp "t") (eq $tp "f") }}({{- end -}} <!--Opening parenthesis for textcite and fullcite-->
-				{{- if ne $tp "f"}}<a href="#{{- $id -}}">{{- end -}} <!--Link that points to the corresponding bibliography entry-->
-				{{- strings.TrimRight "]" (strings.TrimLeft "[" $year) -}}
-				{{- if ne $tp "f"}}</a>{{- end -}}
-				{{- if not (eq $tp "alp") -}}){{- end -}} <!--Closing parenthesis for all-->
-			{{- end -}}
+			{{- if not (eq $tp "alp") -}}
+				)
+				<!--Closing parenthesis for all-->
+			{{ end -}}
 			
 			<!--Fullcite-->
 			{{- if eq $tp "f" -}}.

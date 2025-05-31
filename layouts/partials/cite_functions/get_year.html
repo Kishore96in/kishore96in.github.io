@@ -1,0 +1,11 @@
+{{- $tp := .type -}}
+
+{{- with .entry -}}
+	{{- $id := .id -}}
+	{{- range .issued -}}
+		<!--issued has a key, date-parts, which is of the form [[yyyy,mm,dd]]-->
+		{{- $year := index . 0 -}}
+		{{- $year = index $year 0 -}}
+		{{- strings.TrimRight "]" (strings.TrimLeft "[" $year) -}}
+	{{- end -}}
+{{- end -}}

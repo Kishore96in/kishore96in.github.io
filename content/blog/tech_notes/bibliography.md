@@ -15,6 +15,8 @@ To manage citations in blog posts, the simplest option is to manually add footno
 
 I have implemented a set of shortcodes to manage citations of papers in my blog posts. These started off as a copy of the shortcodes implemented in the '[third hemisphere](https://github.com/pprevos/hugo-thirdhemisphere/)' Hugo theme[^note_third_hemi], but have now been extensively modified to suit my needs.
 
+<!--more-->
+
 [^note_third_hemi]: Described at <https://lucidmanager.org/productivity/hugo-bibliography/>
 
 ## The code

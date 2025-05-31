@@ -16,6 +16,8 @@ tags = [
 
 In the context of the Pencil code, there are three distinct notions of anisotropic forcing:
 
+<!--more-->
+
 1.
 	Changing the values of `ex`, `ey`, and `ez` in `samples/helical-MHDturb/python/generate_kvectors.py` makes the wavenumbers of the forcing different in different directions.
 	This seems useful if one wants the flow to have different spatial scales in different directions.

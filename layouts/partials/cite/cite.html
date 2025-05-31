@@ -72,18 +72,20 @@ Supported types:
 				
 				<!-- Chapter -->
 				{{- if eq .type "chapter" -}}
-					In: 
-					{{- if .editor -}}
-					{{- $n := len .editor -}}
-					{{- if le $n 2 -}}
-					{{- range $index, $author := (first 2 .editor) -}}
-					{{- index . "non-dropping-particle" }}{{- .family }} {{- if and (gt $n 1) ( eq $index 0) }}and {{- end }}
-					{{- end }}
-					{{- end }}
-					{{- if gt $n 2}}{{- range first 1 .editor}}{{- index . "non-dropping-particle" }} {{- .family }}{{- end }} et al.{{- end }}
-					(Ed{{- if gt $n 1 }}s{{- end }}.),
+					In:
+					<i>{{ title (index . "container-title") }}.</i>
+					
+					{{- if .editor }}
+						Ed. by
+						{{ $n := len .editor -}}
+						{{- if le $n 2 -}}
+							{{- range $index, $author := (first 2 .editor) -}}
+								{{- index . "non-dropping-particle" }}{{- .family }} {{- if and (gt $n 1) ( eq $index 0) }}and {{- end }}
+							{{- end }}
+						{{- end }}
+						{{- if gt $n 2}}{{- range first 1 .editor}}{{- index . "non-dropping-particle" }} {{- .family }}{{- end }} et al.{{- end }}
 					{{- end -}}
-					<i>{{ title (index . "container-title") }}</i>
+					
 					{{- $place := index . "publisher-place" -}}
 					{{- if or .publisher $place }} ({{ end }}
 					{{- if .publisher }}{{ .publisher}}{{ end }}

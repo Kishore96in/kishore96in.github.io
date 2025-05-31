@@ -2,6 +2,9 @@
 title = "A note on various implementations of anisotropic forcing in Pencil"
 date = "2025-03-23T20:11:14+05:30"
 url = "blog/anisotropy-pencil-code"
+tags = [
+	"Pencil code",
+	]
 
 [params]
 	macros = [

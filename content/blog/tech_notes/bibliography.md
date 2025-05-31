@@ -2,6 +2,9 @@
 title = "Bibliography management in Hugo"
 date = "2025-05-31T13:35:34+05:30"
 url = "blog/bibliography-hugo"
+tags = [
+	"Tech notes",
+	]
 
 [params]
 	bib = "global_refs.json"

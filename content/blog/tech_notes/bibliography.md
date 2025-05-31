@@ -13,8 +13,9 @@ I have implemented a set of shortcodes to manage citations of papers in my blog 
 
 ## The code
 
-You can view the code at the [Git repository](https://github.com/Kishore96in/kishore96in.github.io/) associated with this website, under the folder `layouts/partials`.
+You can view the code at the [Git repository](https://github.com/Kishore96in/kishore96in.github.io/) associated with this website, under the folder `layouts/partials/cite`.
 A small wrapper to allow the use of the cite function in markdown files is at `shortcodes/cite.html`.
+Automatic printing of the bibliography is done thorough a line at the end of `layouts/_default/single.html`.
 
 ## Creating a bibliography file
 

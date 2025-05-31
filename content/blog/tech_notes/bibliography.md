@@ -35,12 +35,12 @@ In the preamble ([TOML](https://toml.io/en/) format) of your blog post, add
 [params]
 	bib = "global_refs.json"
 ```
-You can then cite references by using the following shortcodes:
+You can then cite references by using the following shortcodes (corresponding biblatex macros are given on the left):
 ```markdown
-Textcite: {{</* cite t CITE_KEY */>}}
-Parencite: {{</* cite p CITE_KEY */>}}
-Parencite without brackets: {{</* cite alp CITE_KEY */>}}
-Fullcite: {{</* cite f CITE_KEY */>}}
+\textcite: {{</* cite t CITE_KEY */>}}
+\parencite: {{</* cite p CITE_KEY */>}}
+\cite (\citealp in natbib): {{</* cite alp CITE_KEY */>}}
+\fullcite: {{</* cite f CITE_KEY */>}}
 ```
 Entries cited in this way (except for fullcite) will be added to the bibliography automatically).
 The bibliography is implemented as a partial which can be included in the HTML templates using
@@ -60,3 +60,5 @@ Here is a full citation which will not be added to the bibliography:
 
 Here is another work by Käpylä: {{< cite t Kap19 >}}.
 Note how a suffix has been added to the year to distinguish it from another (previously cited) study by the same author in the same year {{< cite p kapyla2019Lambda >}}.
+
+For the sake of completeness, `alp` looks like this: {{< cite alp kapyla2019Lambda >}}.

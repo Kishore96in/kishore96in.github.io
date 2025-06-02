@@ -2,7 +2,7 @@
 <article>
   {{ partial "validate_tags.html" . }}
   
-  <a href="{{ .Site.Home.RelPermalink }}">Back to Home</a>
+  {{ partial "home_link.html" . }}
   <h1>{{ .Title }}</h1>
   {{ partial "tags.html" . }}
   {{ .Content }}

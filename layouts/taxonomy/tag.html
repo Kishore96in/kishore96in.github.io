@@ -1,8 +1,6 @@
 {{ define "page" }}
 <article>
-  {{ if ne .Kind "home" }}
-  <a href="{{ .Site.Home.RelPermalink }}">Home</a>
-  {{ end }}
+  {{ partial "home_link.html" . }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range .Pages }}

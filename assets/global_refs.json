@@ -31,6 +31,39 @@
     "volume": "122"
   },
   {
+    "DOI": "10.1103/PhysRevLett.114.075001",
+    "URL": "https://arxiv.org/abs/1404.2238",
+    "author": [
+      {
+        "family": "Brandenburg",
+        "given": "Axel"
+      },
+      {
+        "family": "Kahniashvili",
+        "given": "Tina"
+      },
+      {
+        "family": "Tevzadze",
+        "given": "Alexander G."
+      }
+    ],
+    "container-title": "",
+    "id": "BraKahTev15",
+    "issue": "7",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          2
+        ]
+      ]
+    },
+    "page": "075001",
+    "title": "Nonhelical inverse transfer of a decaying turbulent magnetic field",
+    "type": "article-journal",
+    "volume": "114"
+  },
+  {
     "DOI": "10.22323/1.215.0096",
     "URL": "https://arxiv.org/abs/1501.00416",
     "author": [
@@ -190,6 +223,37 @@
     "title": "Convection-driven hydromagnetic dynamo",
     "type": "article-journal",
     "volume": "29"
+  },
+  {
+    "DOI": "10.3847/1538-4357/add692",
+    "URL": "https://dx.doi.org/10.3847/1538-4357/add692",
+    "abstract": "Previous studies have used magnetic energy and helicity spectra, the latter computed using the two-scale method, to search for signatures of mean-field dynamos. In this study, we compare cotemporal HMI and SOLIS synoptic vector magnetograms to illustrate the instrument-dependence of even qualitative features of the energy and helicity spectra. Around the minimum between solar cycles 24 and 25, we find that the magnetic energy spectrum computed from HMI observations exhibits two distinct peaks. One of these peaks is only present near the cycle minimum and corresponds to large-scale magnetic fields at high latitudes. Nevertheless, such magnetic fields are not present in contemporaneous synoptic vector magnetograms from SOLIS. Further, even when magnetograms from both instruments are apodized, the helicity spectra calculated using the two-scale method disagree (on both the sign and the value of the fractional helicity). This suggests that currently available synoptic magnetograms are not reliable enough for such studies.",
+    "author": [
+      {
+        "family": "Kishore",
+        "given": "G."
+      },
+      {
+        "family": "Singh",
+        "given": "Nishant K."
+      }
+    ],
+    "container-title": "The Astrophysical Journal",
+    "id": "KisSin25",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6
+        ]
+      ]
+    },
+    "page": "183",
+    "publisher": "The American Astronomical Society",
+    "title": "The spectra of solar magnetic energy and helicity",
+    "type": "article-journal",
+    "volume": "986"
   },
   {
     "DOI": "10.1086/169660",
@@ -376,6 +440,38 @@
     "title": "On the power spectrum of solar surface flows",
     "type": "article-journal",
     "volume": "512"
+  },
+  {
+    "URL": "http://jetp.ras.ru/cgi-bin/e/index/e/61/2/p285?a=list",
+    "author": [
+      {
+        "family": "Kazantsev",
+        "given": "A. P."
+      },
+      {
+        "family": "Ruzmaikin",
+        "given": "A. A."
+      },
+      {
+        "family": "Sokolov",
+        "given": "D. D."
+      }
+    ],
+    "container-title": "Soviet Journal of Experimental and Theoretical Physics",
+    "id": "KazRuzSok85",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          1985,
+          2
+        ]
+      ]
+    },
+    "page": "285",
+    "title": "Magnetic field transport in an acoustic turbulence type flow",
+    "type": "article-journal",
+    "volume": "61"
   },
   {
     "DOI": "10.1016/S0273-1177(03)90617-X",
@@ -23628,5 +23724,27 @@
     "title": "Systematic bias in interstellar magnetic field estimates",
     "type": "article-journal",
     "volume": "411"
+  },
+  {
+    "DOI": "10.1017/jfm.2015.82",
+    "author": [
+      {
+        "family": "Alexakis",
+        "given": "A."
+      }
+    ],
+    "container-title": "Journal of Fluid Mechanics",
+    "id": "Ale15",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "page": "46-78",
+    "title": "Rotating taylor–green flow",
+    "type": "article-journal",
+    "volume": "769"
   }
 ]

@@ -9,6 +9,6 @@ url = "research-interests/solar-physics"
 ![image of the Sun](sun.jpg)
 
 
-## Topics
+I have worked on the following topics:
 - Surface magnetic fields {{< cite f KisSin25 >}}
 - Helioseismology ([thesis](/blog/phd_thesis#part-6))

@@ -9,10 +9,11 @@
 		<h1>Tags</h1>
 		{{ range $index, $tag := . }}
 			{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-				{{- if gt $max_index 1 -}}
-					<a href="{{ .Permalink }}">{{ $tag }} ({{ $max_index }} posts)</a>
+				{{ $nposts := (len .Pages)}}
+				{{- if gt $nposts 1 -}}
+					<a href="{{ .Permalink }}">{{ $tag }} ({{ $nposts }} posts)</a>
 				{{- else -}}
-					<a href="{{ .Permalink }}">{{ $tag }} ({{ $max_index }} post)</a>
+					<a href="{{ .Permalink }}">{{ $tag }} ({{ $nposts }} post)</a>
 				{{- end -}}
 			{{- end -}}
 			{{- if eq $index (math.Sub $max_index 1) -}}

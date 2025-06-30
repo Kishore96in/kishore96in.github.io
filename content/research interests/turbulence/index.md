@@ -6,3 +6,7 @@ url = "research-interests/turbulence"
 	bib = "global_refs.json"
 +++
 
+## Topics
+- Rotating turbulence
+- Turbulent transport
+- Shell models {{< cite p kishoreShell2022 >}}

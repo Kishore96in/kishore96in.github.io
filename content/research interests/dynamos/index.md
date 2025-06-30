@@ -9,8 +9,7 @@ url = "research-interests/dynamos"
 ![figure by Pipin et al.,2013](pipZhaSok13_fig_1_panel_1_3.png)
 
 
-## Some publications
-
-- {{< cite f GopSin23 >}}
-- {{< cite f GopSub23 >}}
-- {{< cite f GopSin24 >}}
+## Topics
+- small-scale dynamo {{< cite p GopSin24 >}}
+- large-scale dynamo {{< cite p GopSin23 >}}
+- helicity fluxes {{< cite p GopSub23 >}}

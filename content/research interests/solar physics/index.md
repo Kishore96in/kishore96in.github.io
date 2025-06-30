@@ -8,5 +8,7 @@ url = "research-interests/solar-physics"
 
 ![image of the Sun](sun.jpg)
 
-## Some publications
-- {{< cite f KisSin25 >}}
+
+## Topics
+- Surface magnetic fields {{< cite f KisSin25 >}}
+- Helioseismology

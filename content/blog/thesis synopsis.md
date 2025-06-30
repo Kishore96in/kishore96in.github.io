@@ -27,7 +27,7 @@ Before describing them, here is a list of papers based on my thesis:
 1. {{< cite f GopSin23 >}} (based on chapter [3](#chapter-3))
 1. [2502.02946](https://arxiv.org/abs/2502.02946) (based on chapter [4](#chapter-4))
 1. {{< cite f GopSin24 >}} (based on chapter [5](#chapter-5))
-1. [2503.03332](https://arxiv.org/abs/2503.03332) (based on chapter [7](#chapter-7))
+1. {{< cite f KisSin25 >}} (based on chapter [7](#chapter-7))
 1. [2409.14840](https://arxiv.org/abs/2409.14840) (based on chapter [12](#chapter-12))
 
 ## Part I: Turbulence

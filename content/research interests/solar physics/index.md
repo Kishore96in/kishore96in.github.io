@@ -11,4 +11,4 @@ url = "research-interests/solar-physics"
 
 ## Topics
 - Surface magnetic fields {{< cite f KisSin25 >}}
-- Helioseismology
+- Helioseismology ([thesis](/blog/phd_thesis#part-6))

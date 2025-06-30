@@ -7,6 +7,6 @@ url = "research-interests/turbulence"
 +++
 
 ## Topics
-- Rotating turbulence
-- Turbulent transport
+- Rotating turbulence ([thesis](/blog/phd_thesis#chapter-2))
+- Turbulent transport ([thesis](/blog/phd_thesis#chapter-4))
 - Shell models {{< cite p kishoreShell2022 >}}

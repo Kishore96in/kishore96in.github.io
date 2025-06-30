@@ -45,6 +45,16 @@ article {
 	margin: 0 auto;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+	max-height: 60vh; //1vh is 1% of viewport height
+	
+	//to center-align
+	margin: auto;
+	display: block;
+}
+
 .container {
 	display: grid;
 	gap: 1rem;

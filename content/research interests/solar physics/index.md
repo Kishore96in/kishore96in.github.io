@@ -10,5 +10,5 @@ url = "research-interests/solar-physics"
 
 
 I have worked on the following topics:
-- Surface magnetic fields {{< cite f KisSin25 >}}
+- Surface magnetic fields {{< cite p KisSin25 >}}
 - Helioseismology ([thesis](/blog/phd_thesis#part-6))

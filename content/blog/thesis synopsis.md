@@ -116,6 +116,7 @@ The goal of such a study is to understand if alternative mechanisms also allow t
 We indeed find that at certain latitudes of our setup, magnetic cycles are excited which seem to depend on the existence of an SSD.
 
 ## Part VI: Helioseismology
+{{< anchor part-6 >}}
 
 The Sun supports a wide variety of waves.
 Depending on the nature of the restoring force, the corresponding modes {{< cite p LeiSte81 >}} are classified into various branches.

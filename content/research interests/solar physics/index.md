@@ -6,8 +6,7 @@ url = "research-interests/solar-physics"
 	bib = "global_refs.json"
 +++
 
-![image of the Sun](sun.jpg)
-
+![image of the Sun](sun_downscaled.jpg)
 
 I have worked on the following topics:
 - Surface magnetic fields {{< cite p KisSin25 >}}

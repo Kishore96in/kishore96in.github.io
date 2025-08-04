@@ -10,7 +10,7 @@ Physicist and [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software
 	([why?](https://www.noenthuda.com/2013/02/17/swaminathan-ganesh-and-murali-vijay-and-the-art-of-south-indian-patronymics/))
 
 *Affiliation*:
-	[IUCAA](https://www.iucaa.in/)
+	[IIT Madras](https://www.iitm.ac.in/)
 	([more…](employment_history))
 
 *Publications*:

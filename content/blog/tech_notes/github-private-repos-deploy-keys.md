@@ -1,5 +1,5 @@
 +++
-title = "Cloning GitHub private repositories using Deploy Keys"
+title = "Cloning private GitHub repositories using Deploy Keys"
 date = "2025-06-30T12:43:55+05:30"
 url = "blog/github-private-repos-deploy-keys"
 tags = [

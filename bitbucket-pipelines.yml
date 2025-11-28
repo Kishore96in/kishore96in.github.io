@@ -12,4 +12,4 @@ branches:
 		script:
 			- git clone --bare git@bitbucket.org:kishore-phy/personal-webpage.git
 			- cd personal-webpage.git
-			- git git@github.com:Kishore96in/kishore96in.github.io.git
+			- git push --mirror git@github.com:Kishore96in/kishore96in.github.io.git

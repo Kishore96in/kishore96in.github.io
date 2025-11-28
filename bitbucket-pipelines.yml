@@ -3,7 +3,7 @@ image: atlassian/default-image:3
 pipelines:
     # Automated pipeline for syncing Bitbucket repository with its GitHub mirror, ensuring real-time updates across platforms
     branches:
-        '*':
+        main:
             - step:
                 name: Sync GitHub Mirror
                 image: alpine/git:latest
@@ -12,4 +12,4 @@ pipelines:
                 script:
                     - git clone --bare git@bitbucket.org:kishore-phy/personal-webpage.git
                     - cd personal-webpage.git
-                    - git push --mirror git@github.com:Kishore96in/kishore96in.github.io.git
+                    - git push main git@github.com:Kishore96in/kishore96in.github.io.git
